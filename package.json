@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "description": "Personal config for Hyper",
   "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ahutchings/hyper.git"
@@ -15,5 +18,11 @@
   "homepage": "https://github.com/ahutchings/hyper#readme",
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "color": "^1.0.2"
+  },
+  "devDependencies": {
+    "jest": "^17.0.3"
   }
 }
