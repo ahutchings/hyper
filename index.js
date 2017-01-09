@@ -10,5 +10,6 @@ module.exports.decorateConfig = config => {
           font-variant-ligatures: initial;
       }
   `;
+  config.shell = '/usr/local/bin/fish'
   return config;
 }
