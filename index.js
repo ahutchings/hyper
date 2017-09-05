@@ -1,3 +1,4 @@
+const {delimiter} = require('path');
 const Color = require('color');
 const which = require('which');
 
@@ -23,7 +24,11 @@ module.exports.decorateConfig = config =>
   });
 
 function getShell() {
-  const path = `${process.env.HOME}/brew/bin:${process.env.PATH}`;
+  const path = [
+    `${process.env.HOME}/brew/bin`,
+    '/usr/local/bin',
+    process.env.PATH,
+  ].join(delimiter);
 
   try {
     return which.sync('fish', {
@@ -31,6 +36,7 @@ function getShell() {
     });
   } catch (error) {
     console.warn(`Fish shell not found in path ${path}. Falling back to bash shell.`);
-    return which.sync('bash');
   }
+
+  return which.sync('bash');
 }
