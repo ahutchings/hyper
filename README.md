@@ -1,4 +1,8 @@
-# @ahutchings/hyper [![Build Status](https://travis-ci.org/ahutchings/hyper.svg?branch=master)](https://travis-ci.org/ahutchings/hyper) [![NPM version](https://img.shields.io/npm/v/@ahutchings/hyper.svg)](https://npmjs.org/package/@ahutchings/hyper)
+# @ahutchings/hyper
+
+[![NPM version](https://img.shields.io/npm/v/@ahutchings/hyper.svg)](https://npmjs.org/package/@ahutchings/hyper)
+[![Build Status](https://travis-ci.org/ahutchings/hyper.svg?branch=master)](https://travis-ci.org/ahutchings/hyper)
+[![Greenkeeper badge](https://badges.greenkeeper.io/ahutchings/hyper.svg)](https://greenkeeper.io/)
 
 > Personal config for [Hyper](https://hyper.is/).
 
