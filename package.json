@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "color": "^3.0.0",
-    "which": "^1.3.0"
+    "which": "^2.0.0"
   },
   "devDependencies": {
     "jest": "^23.6.0"
