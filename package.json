@@ -3,6 +3,7 @@
   "version": "1.3.3",
   "description": "Personal config for Hyper",
   "main": "index.js",
+  "files": [],
   "scripts": {
     "test": "jest"
   },
