@@ -21,11 +21,7 @@ module.exports.decorateConfig = (config) =>
   });
 
 function getShell() {
-  const path = [
-    `${process.env.HOME}/brew/bin`,
-    "/usr/local/bin",
-    process.env.PATH,
-  ].join(delimiter);
+  const path = ["/usr/local/bin", process.env.PATH].join(delimiter);
 
   try {
     return which.sync("fish", {
