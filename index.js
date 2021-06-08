@@ -1,18 +1,15 @@
-const {delimiter} = require('path');
-const Color = require('color');
-const which = require('which');
+const { delimiter } = require("path");
+const Color = require("color");
+const which = require("which");
 
 const shell = getShell();
 
-module.exports.onWindow = browserWindow =>
-  browserWindow.setVibrancy('ultra-dark');
+module.exports.onWindow = (browserWindow) =>
+  browserWindow.setVibrancy("ultra-dark");
 
-module.exports.decorateConfig = config =>
+module.exports.decorateConfig = (config) =>
   Object.assign({}, config, {
-    backgroundColor: Color(config.backgroundColor)
-      .alpha(0.85)
-      .rgb()
-      .string(),
+    backgroundColor: Color(config.backgroundColor).alpha(0.85).rgb().string(),
     fontFamily:
       '"Fira Code", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
     termCSS: `
@@ -26,17 +23,19 @@ module.exports.decorateConfig = config =>
 function getShell() {
   const path = [
     `${process.env.HOME}/brew/bin`,
-    '/usr/local/bin',
+    "/usr/local/bin",
     process.env.PATH,
   ].join(delimiter);
 
   try {
-    return which.sync('fish', {
+    return which.sync("fish", {
       path,
     });
   } catch (error) {
-    console.warn(`Fish shell not found in path ${path}. Falling back to bash shell.`);
+    console.warn(
+      `Fish shell not found in path ${path}. Falling back to bash shell.`
+    );
   }
 
-  return which.sync('bash');
+  return which.sync("bash");
 }

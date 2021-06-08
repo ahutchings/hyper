@@ -1,12 +1,14 @@
-const {decorateConfig} = require('../');
+const { decorateConfig } = require("../");
 
-describe('decorateConfig', () => {
+describe("decorateConfig", () => {
   beforeEach(() => {
     console.warn = jest.fn();
   });
 
-  it('should make the backgroundColor transparent', () => {
-    const actual = decorateConfig({backgroundColor: '#1b2b34'}).backgroundColor;
-    expect(actual).toEqual('rgba(27, 43, 52, 0.85)');
+  it("should make the backgroundColor transparent", () => {
+    const actual = decorateConfig({
+      backgroundColor: "#1b2b34",
+    }).backgroundColor;
+    expect(actual).toEqual("rgba(27, 43, 52, 0.85)");
   });
 });
