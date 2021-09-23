@@ -6,7 +6,7 @@ const shell = getShell();
 
 module.exports.decorateConfig = (config) =>
   Object.assign({}, config, {
-    backgroundColor: Color(config.backgroundColor).alpha(0.85).rgb().string(),
+    backgroundColor: Color(config.backgroundColor).alpha(0.95).rgb().string(),
     fontFamily:
       '"Fira Code", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
     termCSS: `
