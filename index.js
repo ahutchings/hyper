@@ -4,9 +4,6 @@ const which = require("which");
 
 const shell = getShell();
 
-module.exports.onWindow = (browserWindow) =>
-  browserWindow.setVibrancy("ultra-dark");
-
 module.exports.decorateConfig = (config) =>
   Object.assign({}, config, {
     backgroundColor: Color(config.backgroundColor).alpha(0.85).rgb().string(),
