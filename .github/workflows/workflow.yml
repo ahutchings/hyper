@@ -10,7 +10,9 @@ jobs:
         with:
           node-version: 14
       - uses: bahmutov/npm-install@v1
-      - run: npx changeset status
+      - run: |
+          git pull -f origin master:master
+          npx changeset status
   jest:
     name: Jest
     runs-on: ubuntu-latest
