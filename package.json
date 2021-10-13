@@ -2,8 +2,11 @@
   "name": "@ahutchings/hyper",
   "version": "2.3.0",
   "description": "Personal config for Hyper",
-  "main": "index.js",
-  "files": [],
+  "main": "source/index.js",
+  "files": [
+    "source",
+    "!*/__tests__/*"
+  ],
   "scripts": {
     "release": "changeset publish",
     "test": "jest"
