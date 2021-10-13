@@ -5,33 +5,53 @@ jobs:
     name: Changesets
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout Repo
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 14
-      - uses: bahmutov/npm-install@v1
-      - run: |
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+          with:
+            node-version: 14
+
+      - name: Install Dependencies
+        uses: bahmutov/npm-install@v1
+
+      - name: Check Changeset Status
+        run: |
           git pull -f origin master:master
           npx changeset status
   jest:
     name: Jest
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 14
-      - uses: bahmutov/npm-install@v1
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+          with:
+            node-version: 14
+
+      - name: Install Dependencies
+        uses: bahmutov/npm-install@v1
+
       - run: npx jest --ci
+
   prettier:
     name: Prettier
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 14
-      - uses: bahmutov/npm-install@v1
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+          with:
+            node-version: 14
+
+      - name: Install Dependencies
+        uses: bahmutov/npm-install@v1
+
       - run: npx prettier . --check
