@@ -1,5 +1,7 @@
 name: CI
+
 on: [push]
+
 jobs:
   changesets:
     name: Changesets
@@ -22,6 +24,7 @@ jobs:
         run: |
           git pull -f origin master:master
           npx changeset status
+
   jest:
     name: Jest
     runs-on: ubuntu-latest
@@ -37,7 +40,8 @@ jobs:
       - name: Install Dependencies
         uses: bahmutov/npm-install@v1
 
-      - run: npx jest --ci
+      - name: Run Jest
+        run: npx jest --ci
 
   prettier:
     name: Prettier
@@ -54,4 +58,5 @@ jobs:
       - name: Install Dependencies
         uses: bahmutov/npm-install@v1
 
-      - run: npx prettier . --check
+      - name: Run Prettier Check
+        run: npx prettier . --check
