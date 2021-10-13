@@ -5,6 +5,7 @@
   "main": "index.js",
   "files": [],
   "scripts": {
+    "release": "changeset publish",
     "test": "jest"
   },
   "repository": {
