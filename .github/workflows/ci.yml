@@ -23,7 +23,7 @@ jobs:
       - name: Check Changeset Status
         run: |
           git pull -f origin master:master
-          npx changeset status
+          npx changeset status --since=master
 
   jest:
     name: Jest
