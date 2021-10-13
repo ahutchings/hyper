@@ -27,9 +27,7 @@ function getShell() {
       path,
     });
   } catch (error) {
-    console.warn(
-      `Fish shell not found in path ${path}. Falling back to bash shell.`
-    );
+    console.warn(`Fish shell not found in path. Falling back to bash shell.`);
   }
 
   return which.sync("bash");
