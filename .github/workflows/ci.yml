@@ -1,6 +1,20 @@
 name: CI
 on: [push]
 jobs:
+  changesets:
+    name: Changesets
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - uses: bahmutov/npm-install@v1
+      - run: |
+          git pull -f origin master:master
+          npx changeset status
   jest:
     name: Jest
     runs-on: ubuntu-latest
