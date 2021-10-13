@@ -1,11 +1,12 @@
 const { delimiter } = require("path");
+const hyperOceanicNext = require("hyper-oceanic-next");
 const Color = require("color");
 const which = require("which");
+const compose = require("./compose-hyper-plugins");
 
-const shell = getShell();
-
-module.exports.decorateConfig = (config) =>
-  Object.assign({}, config, {
+function decorateConfig(config) {
+  return {
+    ...config,
     backgroundColor: Color(config.backgroundColor).alpha(0.95).rgb().string(),
     fontFamily:
       '"Fira Code", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
@@ -14,8 +15,9 @@ module.exports.decorateConfig = (config) =>
           font-variant-ligatures: initial;
       }
   `,
-    shell,
-  });
+    shell: getShell(),
+  };
+}
 
 function getShell() {
   const path = ["/usr/local/bin", process.env.PATH].join(delimiter);
@@ -32,3 +34,7 @@ function getShell() {
 
   return which.sync("bash");
 }
+
+const plugin = { decorateConfig };
+
+module.exports = compose(plugin, hyperOceanicNext);

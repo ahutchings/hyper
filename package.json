@@ -23,6 +23,8 @@
   },
   "dependencies": {
     "color": "^4.0.1",
+    "hyper-oceanic-next": "^0.0.2",
+    "ramda": "^0.27.1",
     "which": "^2.0.2"
   },
   "devDependencies": {
