@@ -1,11 +1,12 @@
 const { delimiter } = require("path");
+const hyperOceanicNext = require("hyper-oceanic-next");
 const Color = require("color");
 const which = require("which");
 
 const shell = getShell();
 
 module.exports.decorateConfig = (config) =>
-  Object.assign({}, config, {
+  Object.assign({}, hyperOceanicNext(config), {
     backgroundColor: Color(config.backgroundColor).alpha(0.95).rgb().string(),
     fontFamily:
       '"Fira Code", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
