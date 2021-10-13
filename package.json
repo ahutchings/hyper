@@ -1,6 +1,6 @@
 {
   "name": "@ahutchings/hyper",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Personal config for Hyper",
   "main": "source/index.js",
   "files": [
