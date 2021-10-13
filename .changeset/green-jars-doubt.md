@@ -1,5 +1,5 @@
 ---
-"@ahutchings/hyper": major
+"@ahutchings/hyper": minor
 ---
 
 Include `hyper-oceanic-next` plugin
