@@ -8,6 +8,10 @@ function decorateConfig(config) {
   return {
     ...config,
     backgroundColor: Color(config.backgroundColor).alpha(0.95).rgb().string(),
+    colors: {
+      ...config.colors,
+      lightBlack: "#4f5b66",
+    },
     fontFamily:
       '"Fira Code", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
     termCSS: `
