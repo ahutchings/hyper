@@ -17,7 +17,7 @@ describe("decorateConfig", () => {
           "blue": "#6699cc",
           "cyan": "#5fb3b3",
           "green": "#99c794",
-          "lightBlack": "#343d46",
+          "lightBlack": "#4f5b66",
           "lightBlue": "#6699cc",
           "lightCyan": "#5fb3b3",
           "lightGreen": "#99c794",
