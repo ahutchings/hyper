@@ -1,5 +1,15 @@
 # @ahutchings/hyper
 
+## 2.4.0
+
+### Minor Changes
+
+- 1c8c8c2: Support homebrew on arm64
+
+### Patch Changes
+
+- a552dee: Update dependencies
+
 ## 2.3.2
 
 ### Patch Changes
