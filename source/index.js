@@ -1,3 +1,4 @@
+const os = require("os");
 const { delimiter } = require("path");
 const hyperOceanicNext = require("hyper-oceanic-next");
 const Color = require("color");
@@ -24,7 +25,9 @@ function decorateConfig(config) {
 }
 
 function getShell() {
-  const path = ["/usr/local/bin", process.env.PATH].join(delimiter);
+  const homebrewPrefix =
+    os.arch() === "arm64" ? "/opt/homebrew/bin" : "/usr/local/bin";
+  const path = [homebrewPrefix, process.env.PATH].join(delimiter);
 
   try {
     return which.sync("fish", {
