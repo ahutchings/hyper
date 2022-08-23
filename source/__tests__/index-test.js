@@ -56,12 +56,12 @@ describe("decorateConfig", () => {
 
   it("finds fish shell", () => {
     which.sync.mockImplementation((cmd) => {
-      if (cmd === "fish") return "/usr/local/bin/fish";
+      if (cmd === "fish") return "/opt/homebrew/bin/fish";
     });
 
     const actual = decorateConfig({});
 
-    expect(actual).toHaveProperty("shell", "/usr/local/bin/fish");
+    expect(actual).toHaveProperty("shell", "/opt/homebrew/bin/fish");
   });
 
   it("falls back to bash shell", () => {
