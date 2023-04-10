@@ -9,10 +9,10 @@ describe("decorateConfig", () => {
     const actual = decorateConfig({});
 
     expect(actual).toMatchInlineSnapshot(`
-      Object {
+      {
         "backgroundColor": "rgba(27, 43, 52, 0.95)",
         "borderColor": "#343d46",
-        "colors": Object {
+        "colors": {
           "black": "#1b2b34",
           "blue": "#6699cc",
           "cyan": "#5fb3b3",
@@ -41,7 +41,7 @@ describe("decorateConfig", () => {
           ",
         "cursorAccentColor": "#1b2b34",
         "cursorColor": "#d8dee9",
-        "fontFamily": "\\"Fira Code\\", Menlo, \\"DejaVu Sans Mono\\", \\"Lucida Console\\", monospace",
+        "fontFamily": ""Fira Code", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace",
         "foregroundColor": "#d8dee9",
         "selectionColor": "rgba(216, 222, 233,0.3)",
         "shell": undefined,
